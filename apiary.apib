@@ -8636,6 +8636,56 @@ Daftar setting field yang mana saja yang digunakan dalam log sheet operasi mesin
         ]
 
 
+## Data Action Checklist [/api/action]
+
+### List Data [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "action_code": "NRPL",
+                "action": "Need Replaced (Butuh Penggantian)",
+                "sort": "2"
+            },
+            {
+                "action_code": "NRPR",
+                "action": "Need Repair (Butuh Perbaikan)",
+                "sort": "4"
+            },
+            {
+                "action_code": "RPL",
+                "action": "Replaced (Penggantian)",
+                "sort": "1"
+            },
+            {
+                "action_code": "RPR",
+                "action": "Replaired (Perbaikan)",
+                "sort": "3"
+            }
+        ]
+
+
+## Data Kondisi Checklist [/api/condition]
+
+### List Data [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "condition_code": "G",
+                "condition": "Good/Baik",
+                "sort": "1"
+            },
+            {
+                "condition_code": "N",
+                "condition": "Not Good/Tidak Baik (Ada Kelainan)",
+                "sort": "2"
+            }
+        ]
+
+
 ## Data Pegawai [/api/employee]
 
 ### List Data [GET]
