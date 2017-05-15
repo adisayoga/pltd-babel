@@ -4216,7 +4216,7 @@ Daftar setting field yang mana saja yang digunakan dalam log sheet operasi mesin
         ]
 
 
-## Data Jenis Gangguan Penyulang [/api/feeder-breaker-type]
+## Data Jenis Gangguan Penyulang [/api/feeder-fault-type]
 
 ### List Data [GET]
 
@@ -4225,22 +4225,22 @@ Daftar setting field yang mana saja yang digunakan dalam log sheet operasi mesin
         [ 
             { 
                 "id":1,
-                "breaker_code":"OCR",
+                "fault_code":"OCR",
                 "descr":"Over Current Relay"
             },
             { 
                 "id":2,
-                "breaker_code":"GFR",
+                "fault_code":"GFR",
                 "descr":"Ground Fault Relay"
             },
             { 
                 "id":3,
-                "breaker_code":"MO",
+                "fault_code":"MO",
                 "descr":"Manual Off"
             },
             { 
                 "id":4,
-                "breaker_code":"UFR",
+                "fault_code":"UFR",
                 "descr":"Under Frequency Relay"
             }
         ]
@@ -10619,10 +10619,12 @@ Sedangkan `members` difilter per lokasi dan per jabatan operator (`position_code
                 ],
                 "pictures":[
                     {
-                        "file_name":"image_1.jpg"
+                        "file_name":"image_1.jpg",
+                        "thumb_name":"image_thumb_1.jpg"
                     },
                     {
-                        "file_name":"image_2.jpg"
+                        "file_name":"image_2.jpg",
+                        "thumb_name":"image_thumb_2.jpg"
                     }
                 ],
                 "members":[
@@ -10725,10 +10727,12 @@ Nilai radio maupun checkbox menggunakan kode `2 pangkat n` (`1, 2, 4, 8, dst...`
                 "username":"",
                 "pictures":[
                     {
-                        "file_name":"image_1.jpg"
+                        "file_name":"image_1.jpg",
+                        "thumb_name":"image_thumb_1.jpg"
                     },
                     {
-                        "file_name":"image_2.jpg"
+                        "file_name":"image_2.jpg",
+                        "thumb_name":"image_thumb_2.jpg"
                     }
                 ]
             }
@@ -10765,11 +10769,13 @@ Field pada log sheet operasi mesin dibuat dinamis karena tiap mesin item yang di
                 ],
                 "pictures":[
                     {
-                        "file_name":"image_1.jpg"
+                        "file_name":"image_1.jpg",
+                        "thumb_name":"image_thumb_1.jpg"
                     },
                     {
-                        "file_name":"image_2.jpg"
-                    },
+                        "file_name":"image_2.jpg",
+                        "thumb_name":"image_thumb_2.jpg"
+                    }
                 ]
             }
         ]
@@ -10805,11 +10811,13 @@ Field pada log sheet operasi mesin dibuat dinamis karena tiap mesin item yang di
                 ],
                 "pictures":[
                     {
-                        "file_name":"image_1.jpg"
+                        "file_name":"image_1.jpg",
+                        "thumb_name":"image_thumb_1.jpg"
                     },
                     {
-                        "file_name":"image_2.jpg"
-                    },
+                        "file_name":"image_2.jpg",
+                        "thumb_name":"image_thumb_2.jpg"
+                    }
                 ]
             }
         ]
@@ -10838,7 +10846,7 @@ Field pada log sheet operasi mesin dibuat dinamis karena tiap mesin item yang di
 + Response 201 (text/plain)
 
 
-## Log Sheet Gangguan Penyulang [/api/feeder-breaker]
+## Log Sheet Gangguan Penyulang [/api/feeder-fault]
 
 ### Insert Data [POST]
 
@@ -10858,11 +10866,13 @@ Field pada log sheet operasi mesin dibuat dinamis karena tiap mesin item yang di
                 "descr":"",
                 "pictures":[
                     {
-                        "file_name":"image_1.jpg"
+                        "file_name":"image_1.jpg",
+                        "thumb_name":"image_thumb_1.jpg"
                     },
                     {
-                        "file_name":"image_2.jpg"
-                    },
+                        "file_name":"image_2.jpg",
+                        "thumb_name":"image_thumb_2.jpg"
+                    }
                 ]
             }
         ]
@@ -10886,30 +10896,32 @@ Field pada log sheet operasi mesin dibuat dinamis karena tiap mesin item yang di
                 "spvs":"M.Hafiz, Aditya, Eko .Y"
                 "descr":null,
                 "activities":[
-                {
-                    "activity":"Periksa Dan Tambah Bbm Di Tangki Mesin",
-                    "sort":1
-                },
-                {
-                    "activity":"Periksa Level Air Pendingin Mesin",
-                    "sort":2
-                }
+                    {
+                        "activity":"Periksa Dan Tambah Bbm Di Tangki Mesin",
+                        "sort":1
+                    },
+                    {
+                        "activity":"Periksa Level Air Pendingin Mesin",
+                        "sort":2
+                    }
                 ],
                 "pictures":[
-                {
-                    "file_name":"image_1.jpg"
-                },
-                {
-                    "file_name":"image_2.jpg"
-                },
+                    {
+                        "file_name":"image_1.jpg",
+                        "thumb_name":"image_thumb_1.jpg"
+                    },
+                    {
+                        "file_name":"image_2.jpg",
+                        "thumb_name":"image_thumb_2.jpg"
+                    }
                 ],
                 "members":[
-                {
-                    "member_id":111
-                },
-                {
-                    "member_id":50
-                }
+                    {
+                        "member_id":111
+                    },
+                    {
+                        "member_id":50
+                    }
                 ]
             }
         ]
@@ -10952,11 +10964,13 @@ Field pada log sheet operasi mesin dibuat dinamis karena tiap mesin item yang di
                 ],
                 "pictures":[
                     {
-                        "file_name":"image_1.jpg"
+                        "file_name":"image_1.jpg",
+                        "thumb_name":"image_thumb_1.jpg"
                     },
                     {
-                        "file_name":"image_2.jpg"
-                    },
+                        "file_name":"image_2.jpg",
+                        "thumb_name":"image_thumb_2.jpg"
+                    }
                 ]
             },
             { 
@@ -10981,11 +10995,13 @@ Field pada log sheet operasi mesin dibuat dinamis karena tiap mesin item yang di
                 ],
                 "pictures":[
                     {
-                        "file_name":"image_1.jpg"
+                        "file_name":"image_1.jpg",
+                        "thumb_name":"image_thumb_1.jpg"
                     },
                     {
-                        "file_name":"image_2.jpg"
-                    },
+                        "file_name":"image_2.jpg",
+                        "thumb_name":"image_thumb_2.jpg"
+                    }
                 ]
             } 
         ]
