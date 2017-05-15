@@ -10753,19 +10753,22 @@ Field pada log sheet operasi mesin dibuat dinamis karena tiap mesin item yang di
             { 
                 "machine_id":10,
                 "log_date":"2016-12-23",
-                "values":[
-                {
-                    "key":"gen_load",
-                    "log_hours":1,
-                    "log_time":"2016-12-23 01:15",
-                    "log_value":42
-                },
-                {
-                    "key":"gen_freq",
-                    "log_hours":5,
-                    "log_time":"2016-12-23 04:50",
-                    "log_value": 100
-                }
+                "logs":[
+                    {
+                        "key":"gen_load",
+                        "log_hour":1,
+                        "log_time":"2016-12-23 01:15",
+                        "gen_load": 42,
+                        "gen_freq": 43,
+                        "gen_volt": 44
+                    },
+                    {
+                        "log_hour":5,
+                        "log_time":"2016-12-23 04:50",
+                        "gen_load": 100,
+                        "gen_freq": 101,
+                        "gen_volt": 102
+                    }
                 ],
                 "pictures":[
                     {
@@ -10793,16 +10796,16 @@ Field pada log sheet operasi mesin dibuat dinamis karena tiap mesin item yang di
             { 
                 "feeder_id":9,
                 "log_date":"2016-12-23",
-                "values": [
+                "logs": [
                     {
-                        "log_hours":1,
+                        "log_hour":1,
                         "log_time":"2016-12-23 01:15",
                         "load_r":100,
                         "load_s":120,
                         "load_t":110
                     },
                     {
-                        "log_hours":2,
+                        "log_hour":2,
                         "log_time":"2016-12-23 01:55",
                         "load_r":103,
                         "load_s":100,
@@ -10835,11 +10838,22 @@ Field pada log sheet operasi mesin dibuat dinamis karena tiap mesin item yang di
             { 
                 "location_id":2,
                 "log_date":"2016-12-23",
-                "log_hours":1,
-                "log_time":"2016-12-23 01:15",
-                "gen_load":100,
-                "gen_freq":120,
-                "get_volt":110
+                "logs": [
+                    {
+                        "log_hour":1,
+                        "log_time":"2016-12-23 01:15",
+                        "gen_load":100,
+                        "gen_freq":120,
+                        "gen_volt":110
+                    }, 
+                    {
+                        "log_hour":2,ne 
+                        "log_time":"2016-12-23 02:01",
+                        "gen_load":110,
+                        "gen_freq":120,
+                        "gen_volt":100
+                    }
+                ]
             }
         ]
 
