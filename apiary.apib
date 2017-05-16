@@ -11016,3 +11016,54 @@ Field pada log sheet operasi mesin dibuat dinamis karena tiap mesin item yang di
         ]
 
 + Response 201 (text/plain)
+
+
+## Upload File [/api/upload]
+
+Request parameter terdiri dari:
+
+  - `file`: file yang upload.
+  
+  - `filename`: (optional) nama dari file yang diupload. jika tidak ditentukan maka 
+     akan digenerate filename baru.
+     
+  - `dirname`: (optional) default = upload. Dirname untuk masing-masing item:
+  
+    - Jurnal operasi --> `operation_journal`.
+    - Checklist start/laik operasi mesin --> `machine_check`.
+    - Log sheet operasi mesin --> `machine_log`.
+    - Log sheet arus penyulang --> `feeder_log`.
+    - Log sheet gangguan penyulang --> `feeder_fault`.
+    - Jurnal pemeliharaan --> `maintenance_journal`.
+    - Checklist pemeliharaan --> `maintenance`.
+
+### Upload [POST]
+
++ Request (multipart/form-data; boundary=---BOUNDARY)
+
+        -----BOUNDARY
+        Content-Disposition: form-data; name="file"; filename="image.jpg"
+        Content-Type: image/jpeg
+        Content-Transfer-Encoding: base64
+        
+        /9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+        HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+        MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAABAAEDASIA
+        AhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEB
+        AAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AL+AD//Z
+        -----BOUNDARY
+        Content-Disposition: form-data; name="filename"
+
+        new_image.jpg
+        -----BOUNDARY
+        Content-Disposition: form-data; name="dirname"
+
+        upload
+        -----BOUNDARY--
+
++ Response 201 (applicatin/json)
+
+        {
+            "filename": "new_image.jpg",
+            "dirname": "upload"
+        }
