@@ -174,6 +174,49 @@ Password hanya menggunakan `md5('raw_password')`
         ]
 
 
+## Data Penyulang [/api/feeder]
+
+### List Data [GET]
+
++ Response 200 (application/json)
+
+        [
+            {"feeder_id":"1","location_id":"1","location":"Merawang","system_id":"1","system":"Bangka Belitung","subsystem_id":"1","subsystem":"Bangka","feeder":"PP 1","last_log_start":"2015-01-02 00:00:00","last_log_end":null},
+            {"feeder_id":"3","location_id":"1","location":"Merawang","system_id":"1","system":"Bangka Belitung","subsystem_id":"1","subsystem":"Bangka","feeder":"PP 3","last_log_start":"2015-01-02 00:00:00","last_log_end":null},
+            {"feeder_id":"4","location_id":"1","location":"Merawang","system_id":"1","system":"Bangka Belitung","subsystem_id":"1","subsystem":"Bangka","feeder":"PP 4","last_log_start":"2015-01-02 00:00:00","last_log_end":null},
+            {"feeder_id":"5","location_id":"1","location":"Merawang","system_id":"1","system":"Bangka Belitung","subsystem_id":"1","subsystem":"Bangka","feeder":"PP 5","last_log_start":"2015-01-02 00:00:00","last_log_end":null},
+            {"feeder_id":"6","location_id":"1","location":"Merawang","system_id":"1","system":"Bangka Belitung","subsystem_id":"1","subsystem":"Bangka","feeder":"PP 6","last_log_start":"2015-01-02 00:00:00","last_log_end":null},
+            {"feeder_id":"7","location_id":"1","location":"Merawang","system_id":"1","system":"Bangka Belitung","subsystem_id":"1","subsystem":"Bangka","feeder":"PP 7","last_log_start":"2015-01-02 00:00:00","last_log_end":null},
+            {"feeder_id":"8","location_id":"1","location":"Merawang","system_id":"1","system":"Bangka Belitung","subsystem_id":"1","subsystem":"Bangka","feeder":"PP 8","last_log_start":"2015-01-02 00:00:00","last_log_end":null},
+            {"feeder_id":"9","location_id":"1","location":"Merawang","system_id":"1","system":"Bangka Belitung","subsystem_id":"1","subsystem":"Bangka","feeder":"SL 1","last_log_start":"2015-01-02 00:00:00","last_log_end":null},
+            {"feeder_id":"10","location_id":"1","location":"Merawang","system_id":"1","system":"Bangka Belitung","subsystem_id":"1","subsystem":"Bangka","feeder":"SL 2","last_log_start":"2015-01-02 00:00:00","last_log_end":null},
+            {"feeder_id":"11","location_id":"1","location":"Merawang","system_id":"1","system":"Bangka Belitung","subsystem_id":"1","subsystem":"Bangka","feeder":"SL 3","last_log_start":"2015-01-02 00:00:00","last_log_end":null},
+            {"feeder_id":"12","location_id":"1","location":"Merawang","system_id":"1","system":"Bangka Belitung","subsystem_id":"1","subsystem":"Bangka","feeder":"SL 4","last_log_start":"2015-01-02 00:00:00","last_log_end":null},
+            {"feeder_id":"26","location_id":"1","location":"Merawang","system_id":"1","system":"Bangka Belitung","subsystem_id":"1","subsystem":"Bangka","feeder":"PP 2","last_log_start":null,"last_log_end":null},
+            {"feeder_id":"22","location_id":"2","location":"Mentok","system_id":"1","system":"Bangka Belitung","subsystem_id":"1","subsystem":"Bangka","feeder":"Feeder Anoa (M1)","last_log_start":null,"last_log_end":null},
+            {"feeder_id":"23","location_id":"2","location":"Mentok","system_id":"1","system":"Bangka Belitung","subsystem_id":"1","subsystem":"Bangka","feeder":"Feeder Badak (M2)","last_log_start":null,"last_log_end":null},
+            {"feeder_id":"24","location_id":"2","location":"Mentok","system_id":"1","system":"Bangka Belitung","subsystem_id":"1","subsystem":"Bangka","feeder":"Feeder Cheetah (M3)","last_log_start":null,"last_log_end":null},
+            {"feeder_id":"25","location_id":"2","location":"Mentok","system_id":"1","system":"Bangka Belitung","subsystem_id":"1","subsystem":"Bangka","feeder":"Feeder Gajah (M5)","last_log_start":null,"last_log_end":null},
+            {"feeder_id":"15","location_id":"3","location":"Toboali","system_id":"1","system":"Bangka Belitung","subsystem_id":"1","subsystem":"Bangka","feeder":"Toboali","last_log_start":"2015-01-02 00:00:00","last_log_end":null},
+            {"feeder_id":"17","location_id":"5","location":"Tanjung Labu","system_id":"1","system":"Bangka Belitung","subsystem_id":"1","subsystem":"Bangka","feeder":"Tanjung Labu","last_log_start":"2015-01-02 00:00:00","last_log_end":null},
+            {"feeder_id":"18","location_id":"6","location":"Pilang","system_id":"1","system":"Bangka Belitung","subsystem_id":"2","subsystem":"Belitung","feeder":"MADURA","last_log_start":"2015-01-02 00:00:00","last_log_end":null},
+            {"feeder_id":"27","location_id":"6","location":"Pilang","system_id":"1","system":"Bangka Belitung","subsystem_id":"2","subsystem":"Belitung","feeder":"TANJUNG","last_log_start":null,"last_log_end":null},
+            {"feeder_id":"28","location_id":"6","location":"Pilang","system_id":"1","system":"Bangka Belitung","subsystem_id":"2","subsystem":"Belitung","feeder":"LAHAT","last_log_start":null,"last_log_end":null},
+            {"feeder_id":"29","location_id":"6","location":"Pilang","system_id":"1","system":"Bangka Belitung","subsystem_id":"2","subsystem":"Belitung","feeder":"PALEMBANG","last_log_start":null,"last_log_end":null},
+            {"feeder_id":"30","location_id":"6","location":"Pilang","system_id":"1","system":"Bangka Belitung","subsystem_id":"2","subsystem":"Belitung","feeder":"MEDAN","last_log_start":null,"last_log_end":null},
+            {"feeder_id":"31","location_id":"6","location":"Pilang","system_id":"1","system":"Bangka Belitung","subsystem_id":"2","subsystem":"Belitung","feeder":"MALUKU","last_log_start":null,"last_log_end":null},
+            {"feeder_id":"32","location_id":"6","location":"Pilang","system_id":"1","system":"Bangka Belitung","subsystem_id":"2","subsystem":"Belitung","feeder":"RIAU","last_log_start":null,"last_log_end":null},
+            {"feeder_id":"33","location_id":"6","location":"Pilang","system_id":"1","system":"Bangka Belitung","subsystem_id":"2","subsystem":"Belitung","feeder":"ANDALAS","last_log_start":null,"last_log_end":null},
+            {"feeder_id":"34","location_id":"6","location":"Pilang","system_id":"1","system":"Bangka Belitung","subsystem_id":"2","subsystem":"Belitung","feeder":"BALI","last_log_start":null,"last_log_end":null},
+            {"feeder_id":"35","location_id":"6","location":"Pilang","system_id":"1","system":"Bangka Belitung","subsystem_id":"2","subsystem":"Belitung","feeder":"BABEL","last_log_start":null,"last_log_end":null},
+            {"feeder_id":"36","location_id":"6","location":"Pilang","system_id":"1","system":"Bangka Belitung","subsystem_id":"2","subsystem":"Belitung","feeder":"LAMPUNG","last_log_start":null,"last_log_end":null},
+            {"feeder_id":"19","location_id":"7","location":"Padang","system_id":"1","system":"Bangka Belitung","subsystem_id":"2","subsystem":"Belitung","feeder":"Padang","last_log_start":"2015-01-02 00:00:00","last_log_end":null},
+            {"feeder_id":"20","location_id":"8","location":"Selat Nasik","system_id":"1","system":"Bangka Belitung","subsystem_id":"2","subsystem":"Belitung","feeder":"Selat Nasik","last_log_start":"2015-01-02 00:00:00","last_log_end":null},
+            {"feeder_id":"13","location_id":"9","location":"Pulau Seliu","system_id":"1","system":"Bangka Belitung","subsystem_id":"2","subsystem":"Belitung","feeder":"-","last_log_start":"2015-01-02 00:00:00","last_log_end":null},
+            {"feeder_id":"21","location_id":"9","location":"Pulau Seliu","system_id":"1","system":"Bangka Belitung","subsystem_id":"2","subsystem":"Belitung","feeder":"Pulau Seliu","last_log_start":"2015-02-18 08:52:00","last_log_end":null}
+        ]
+
+
 ## Data Mesin [/api/machine]
 
 ### List Data [GET]
